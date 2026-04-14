@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic page setup so the browser can read the page properly and scale it on mobile screens -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- This title appears in the browser tab -->
+  <title>A La Istanbul | Reservation</title>
+
+  <!-- I kept the same fonts here so all pages look connected as one website -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap helps me with the responsive grid, navbar, spacing, and form styling -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- My own stylesheet is linked here so this page uses the same custom styles as the rest of the site -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- This skip link is here for accessibility so keyboard users can move straight to the main content -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <!-- I reused the same navbar from the other pages so navigation stays consistent across the site -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom" aria-label="Primary navigation">
+      <div class="container">
+
+        <!-- Brand logo and restaurant name -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <img src="photos/logo.png" alt="A La Istanbul logo" width="42" height="42">
+          <span class="brand-text">A La Istanbul</span>
+        </a>
+
+        <!-- This button appears on smaller screens when the menu collapses -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#site-nav"
+          aria-controls="site-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Main page links -->
+        <div class="collapse navbar-collapse" id="site-nav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+
+            <!-- I marked reservation as active because this is the page the user is visiting now -->
+            <li class="nav-item"><a class="nav-link active" href="reservation.html" aria-current="page">Reservation</a></li>
+          </ul>
+
+          <!-- This call-to-action stays in the navbar because reserving is one of the main goals of the website -->
+          <a href="reservation.html" class="btn btn-brand ms-lg-3">Book a Table</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- I added a banner section at the top so users know right away that this page is for reservations -->
+    <section class="page-banner py-5">
+      <div class="container text-center">
+        <p class="eyebrow mb-2">Reserve Your Table</p>
+        <h1 class="display-5 fw-bold mb-3">Plan your visit in a few simple steps.</h1>
+        <p class="lead mx-auto page-lead">
+          Reserve online for lunch, dinner, or a special gathering with friends and family.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-5 py-lg-6">
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-start">
+
+          <!-- I placed restaurant info beside the form so users can see basic details without leaving the page -->
+          <div class="col-lg-5">
+            <div class="reservation-info-card h-100">
+
+              <!-- I used your reservation image here to make the page look warmer and more visual -->
+              <img
+                src="photos/reservation.png"
+                alt="Restaurant reservation dining area"
+                class="img-fluid rounded-4 shadow-sm mb-4"
+              >
+
+              <h2 class="section-title mb-3">Visit Information</h2>
+              <p class="mb-4">
+                We recommend booking ahead for evenings and weekends because those times are usually the busiest.
+              </p>
+
+              <!-- I used a simple list here because the details are quick facts and easier to scan in this format -->
+              <ul class="list-unstyled reservation-details mb-0">
+                <li><strong>Location:</strong> Ottawa, Ontario</li>
+                <li><strong>Hours:</strong> Mon–Sun, 11:00 AM – 10:00 PM</li>
+                <li><strong>Phone:</strong> (613) 555-0147</li>
+                <li><strong>Email:</strong> hello@alaistanbul.ca</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- I made the form the main interactive part of the page because booking is the main purpose here -->
+          <div class="col-lg-7">
+            <form class="reservation-form shadow-sm" action="#" method="post">
+              <div class="row g-3">
+
+                <!-- Name field -->
+                <div class="col-md-6">
+                  <label for="full-name" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="full-name" name="full-name" required>
+                </div>
+
+                <!-- Email field -->
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+
+                <!-- Phone field -->
+                <div class="col-md-6">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+
+                <!-- Number of guests -->
+                <div class="col-md-6">
+                  <label for="guests" class="form-label">Number of Guests</label>
+                  <select class="form-select" id="guests" name="guests" required>
+                    <option value="">Select</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6+</option>
+                  </select>
+                </div>
+
+                <!-- Date input -->
+                <div class="col-md-6">
+                  <label for="date" class="form-label">Date</label>
+                  <input type="date" class="form-control" id="date" name="date" required>
+                </div>
+
+                <!-- Time input -->
+                <div class="col-md-6">
+                  <label for="time" class="form-label">Time</label>
+                  <input type="time" class="form-control" id="time" name="time" required>
+                </div>
+
+                <!-- Notes area -->
+                <div class="col-12">
+                  <label for="notes" class="form-label">Special Requests</label>
+                  <textarea
+                    class="form-control"
+                    id="notes"
+                    name="notes"
+                    rows="5"
+                    placeholder="Birthday, larger group, dietary needs, or anything else you want us to know."
+                  ></textarea>
+                </div>
+
+                <!-- Submit button -->
+                <div class="col-12">
+                  <button type="submit" class="btn btn-brand btn-lg w-100">Confirm Reservation</button>
+                </div>
+
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- I repeated the footer links here so users still have navigation options at the bottom of the page -->
+  <footer class="site-footer py-4">
+    <div class="container">
+      <div class="row g-3 align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0">© 2026 A La Istanbul. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="menu.html" class="footer-link">Menu</a>
+          <a href="reservation.html" class="footer-link">Reservation</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- I added the Bootstrap JS bundle here so the mobile navbar works properly -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

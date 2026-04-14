@@ -1,0 +1,213 @@
+:root {
+  --bs-primary: #9b1c1c;
+  --bs-primary-rgb: 155, 28, 28;
+  --bs-secondary: #1f1f1f;
+  --bs-secondary-rgb: 31, 31, 31;
+  --bs-body-bg: #f8f5f1;
+  --bs-body-bg-rgb: 248, 245, 241;
+  --bs-body-color: #2d2d2d;
+  --bs-body-color-rgb: 45, 45, 45;
+  --bs-border-color: #e7ddd4;
+  --brand-dark: #2b211d;
+  --brand-red: #9b1c1c;
+  --brand-cream: #f8f5f1;
+  --brand-soft: #efe4db;
+  --brand-gold: #c99b5f;
+  --brand-green: #7abf9a;
+  --brand-white: #ffffff;
+  --heading-font: "Playfair Display", serif;
+  --body-font: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--brand-cream);
+  color: var(--bs-body-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 1000;
+  padding: 0.75rem 1rem;
+  background-color: var(--brand-dark);
+  color: var(--brand-white);
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.brand-text {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  color: var(--brand-dark);
+}
+
+.navbar .nav-link {
+  font-weight: 600;
+  color: var(--brand-dark);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active {
+  color: var(--brand-red);
+}
+
+.btn-brand {
+  background-color: var(--brand-red);
+  border-color: var(--brand-red);
+  color: var(--brand-white);
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+  background-color: #7e1616;
+  border-color: #7e1616;
+  color: var(--brand-white);
+}
+
+.btn-outline-brand {
+  border: 2px solid var(--brand-red);
+  color: var(--brand-red);
+  background-color: transparent;
+}
+
+.btn-outline-brand:hover,
+.btn-outline-brand:focus {
+  background-color: var(--brand-red);
+  color: var(--brand-white);
+}
+
+.hero-section,
+.page-banner {
+  background:
+    linear-gradient(rgba(248, 245, 241, 0.88), rgba(248, 245, 241, 0.88)),
+    radial-gradient(circle at top right, rgba(201, 155, 95, 0.15), transparent 35%);
+}
+
+.hero-image {
+  min-height: 340px;
+  object-fit: cover;
+}
+
+.eyebrow {
+  color: var(--brand-red);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+}
+
+.section-title {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  color: var(--brand-dark);
+}
+
+.bg-soft {
+  background-color: var(--brand-soft);
+}
+
+.feature-card,
+.reservation-info-card {
+  background-color: var(--brand-white);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(43, 33, 29, 0.08);
+}
+
+.dish-card img,
+.menu-card img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.dish-card,
+.menu-card {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.price-tag {
+  display: inline-block;
+  background-color: var(--brand-soft);
+  color: var(--brand-red);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.page-lead {
+  max-width: 45rem;
+}
+
+.reservation-form {
+  background-color: var(--brand-white);
+  border-radius: 1.25rem;
+  padding: 2rem;
+}
+
+.form-control,
+.form-select {
+  border: 1px solid #ccb9ab;
+  padding: 0.85rem 1rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--brand-red);
+  box-shadow: 0 0 0 0.2rem rgba(155, 28, 28, 0.15);
+}
+
+.site-footer {
+  background-color: var(--brand-red);
+  color: var(--brand-white);
+}
+
+.footer-link {
+  color: var(--brand-white);
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  text-decoration: underline;
+}
+
+.py-lg-6 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 767.98px) {
+  .hero-image {
+    min-height: 260px;
+  }
+
+  .reservation-form,
+  .feature-card,
+  .reservation-info-card {
+    padding: 1.5rem;
+  }
+
+  .footer-link {
+    margin-left: 0.75rem;
+  }
+}
